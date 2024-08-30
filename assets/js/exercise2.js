@@ -20,12 +20,18 @@ const inputChange = (e) => {
   checkStickers()
 }
 
-Object.entries(stickers).forEach(([id, { img }]) => {
+Object.entries(stickers).forEach(([id, { desc, img }]) => {
   const stickersImg = document.createElement("img")
   stickersImg.className = "stickers-img"
   stickersImg.src = `./assets/img/${img}`
   stickersImg.style.gridArea = `sticker${id}`
   stickersContainer.appendChild(stickersImg)
+
+  const stickersDesc = document.createElement("p")
+  stickersDesc.className = "stickers-desc"
+  stickersDesc.style.gridArea = `desc${id}`
+  stickersDesc.innerText = desc
+  stickersContainer.appendChild(stickersDesc)
 
   const stickersInput = document.createElement("input")
   stickersInput.className = "stickers-input"
