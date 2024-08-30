@@ -1,0 +1,60 @@
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    130deg,
+    rgba(2, 0, 36, 0.9794292717086834) 0%,
+    rgba(70, 9, 121, 1) 60%,
+    rgba(1, 83, 190, 1) 100%
+  );
+  color: rgb(187, 191, 221);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(5fr, 3) 1fr;
+  grid-template-areas:
+    "title title title title title"
+    ". exercise1 exercise2 exercise3 ."
+    "frame frame frame frame frame";
+  gap: 1.5rem 2rem;
+  width: 70%;
+  margin: auto;
+}
+
+h1 {
+  grid-area: title;
+  text-align: center;
+  font-size: 3.5rem;
+  margin: 4rem 0 1rem;
+}
+
+.btn-ejercicio {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-ejercicio:hover {
+  background-color: #7a60a7;
+  color: #fff;
+}
+
+#exercise1 {
+  grid-area: exercise1;
+}
+
+#exercise2 {
+  grid-area: exercise2;
+}
+
+#exercise3 {
+  grid-area: exercise3;
+}
+
+.frame {
+  grid-area: frame;
+  width: 100%;
+  aspect-ratio: 6 / 4;
+  background-color: rgb(187, 191, 221);
+}
