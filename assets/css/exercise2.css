@@ -1,0 +1,31 @@
+.stickers-container {
+  display: grid;
+  grid-template-columns: repeat(1fr, 3);
+  grid-template-areas:
+    "sticker1 sticker2 sticker3"
+    "input1 input2 input3"
+    "info info info";
+  gap: 1rem 3rem;
+}
+
+.stickers-img {
+  --border-color: rgba(255, 255, 255, 0.75);
+  width: 225px;
+  filter: drop-shadow(2px 0 var(--border-color)) drop-shadow(-2px 0 var(--border-color))
+    drop-shadow(0 2px var(--border-color)) drop-shadow(0 -2px var(--border-color))
+    drop-shadow(-2px 2px var(--border-color)) drop-shadow(-2px -2px var(--border-color))
+    drop-shadow(2px 2px var(--border-color)) drop-shadow(2px -2px var(--border-color)) drop-shadow(0 0 1px black);
+}
+
+.stickers-input {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.info {
+  grid-area: info;
+  text-align: center;
+  font-size: 1.5rem;
+}
